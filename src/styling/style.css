@@ -13,6 +13,21 @@
 .btn-primary {
   width: 100px;
 }
+.city-name {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.current-image img {
+  float: left;
+  max-width: 90px;
+}
 ul {
   list-style: none;
+}
+small {
+  font-weight: 200;
+}
+.tomorrow-and-next img {
+  max-width: 90px;
 }

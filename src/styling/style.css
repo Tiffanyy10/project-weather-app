@@ -11,6 +11,10 @@
   line-height: 30px;
   margin: auto 0 35px 0;
 }
+.date {
+  display: block;
+  text-align: center;
+}
 .search-row {
   display: block;
   margin: 0 auto;
@@ -26,6 +30,10 @@
 }
 .currently {
   margin: 0 auto 0 10px;
+}
+#current-description {
+  font-weight: 100;
+  text-transform: uppercase;
 }
 .current-image img {
   float: left;

@@ -1,6 +1,10 @@
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#currentTemperature");
   temperatureElement.innerHTML = response.data.main.temp;
+  let cityElement = document.querySelector("#city-name");
+  cityElement.innerHTML = response.data.name;
+  let descriptionElement = document.querySelector("#current-description");
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 
 let apiKey = "4a3dabcb0d3320338e6143377feb5126";

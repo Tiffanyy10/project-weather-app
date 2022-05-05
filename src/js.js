@@ -5,6 +5,8 @@ function displayTemperature(response) {
   cityElement.innerHTML = response.data.name;
   let descriptionElement = document.querySelector("#current-description");
   descriptionElement.innerHTML = response.data.weather[0].description;
+  let windElement = document.querySelector("#current-wind-speed");
+  windElement.innerHTML = response.data.wind.speed;
 }
 
 let apiKey = "4a3dabcb0d3320338e6143377feb5126";

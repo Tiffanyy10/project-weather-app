@@ -20,6 +20,9 @@
   margin: 0 auto;
   text-align: center;
 }
+#search-box {
+  line-height: 14px;
+}
 .btn-primary {
   width: 100px;
 }
@@ -27,6 +30,8 @@
   display: block;
   margin: 0 auto;
   text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .currently {
   margin: 0 auto 0 10px;

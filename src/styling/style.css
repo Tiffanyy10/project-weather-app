@@ -1,7 +1,8 @@
 .whole-project {
   max-width: 600px;
-  margin: 45px auto;
-  border: 1px gray solid;
+  margin: 25px auto;
+  padding-top: 10px;
+  border: 2px whitesmoke solid;
   border-radius: 30px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   background: linear-gradient(
@@ -23,8 +24,8 @@
   display: block;
   font-size: 33px;
   text-align: center;
-  line-height: 30px;
-  margin: auto 0 35px 0;
+  line-height: 28px;
+  margin: auto 0 22px 0;
 }
 #todays-date {
   display: block;

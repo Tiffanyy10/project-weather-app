@@ -2,7 +2,22 @@
   max-width: 600px;
   margin: 45px auto;
   border: 1px gray solid;
+  border-radius: 30px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: linear-gradient(
+    110.7deg,
+    rgb(255, 81, 47) 1.7%,
+    rgb(255, 167, 47) 8.2%,
+    rgb(218, 253, 1) 16.2%,
+    rgb(98, 234, 20) 23.4%,
+    rgb(69, 193, 42) 32.8%,
+    rgb(7, 249, 149) 43.7%,
+    rgb(6, 200, 217) 55.3%,
+    rgb(18, 51, 233) 65.5%,
+    rgb(122, 59, 202) 74.5%,
+    rgb(231, 7, 249) 82.3%,
+    rgb(202, 59, 163) 91.4%
+  );
 }
 .h1 {
   display: block;
@@ -40,7 +55,7 @@
   font-weight: 100;
   text-transform: uppercase;
 }
-.current-image img {
+#current-image img {
   float: left;
   max-width: 90px;
 }

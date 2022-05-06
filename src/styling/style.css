@@ -75,6 +75,11 @@ ul {
   margin: 25px auto auto -25px;
 }
 footer {
-  font-weight: 200;
-  float: left;
+  font-weight: 600;
+  float: right;
+  margin: 100px 0px auto 0px;
+}
+#scemoji {
+  max-width: 80px;
+  max-height: 70px;
 }

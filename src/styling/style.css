@@ -11,7 +11,7 @@
   line-height: 30px;
   margin: auto 0 35px 0;
 }
-.date {
+#todays-date {
   display: block;
   text-align: center;
 }

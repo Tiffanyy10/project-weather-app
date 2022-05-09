@@ -20,12 +20,28 @@ function formatDate(timestamp) {
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = "";
-  forecastHTML = `
+
+  forecastHTML =
+    forecastHTML +
+    `
   <div class="row">
             <div class="col-6">
               Avgerage expected temp tomorrow: 
               <div class="tomorrow-temp">
-                50 c
+                45 c
+              </div> 
+              <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="tomorrow-image"/>
+            </div>
+        </div>
+        `;
+  forecastHTML =
+    forecastHTML +
+    `
+  <div class="row">
+            <div class="col-6">
+              Avgerage expected temp tomorrow: 
+              <div class="tomorrow-temp">
+                45 c
               </div> 
               <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="tomorrow-image"/>
             </div>

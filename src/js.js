@@ -17,7 +17,6 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
-
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = "";
@@ -28,13 +27,6 @@ function displayForecast() {
               <div class="tomorrow-temp">
                 50 c
               </div> 
-              <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="tomorrow-image"/>
-            </div>
-            <div class="col-6">
-              Average expected temp the next day: 
-              <div class="next-day-temp">
-                99 c
-              </div>
               <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="tomorrow-image"/>
             </div>
         </div>

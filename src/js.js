@@ -18,6 +18,30 @@ function formatDate(timestamp) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  forecastHTML = `
+  <div class="row">
+            <div class="col-6">
+              Avgerage expected temp tomorrow: 
+              <div class="tomorrow-temp">
+                50 c
+              </div> 
+              <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="tomorrow-image"/>
+            </div>
+            <div class="col-6">
+              Average expected temp the next day: 
+              <div class="next-day-temp">
+                99 c
+              </div>
+              <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="tomorrow-image"/>
+            </div>
+        </div>
+        `;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#currentTemperature");
   temperatureElement.innerHTML = response.data.main.temp;
@@ -50,3 +74,5 @@ function submitted(event) {
 
 let form = document.querySelector("#search-box");
 form.addEventListener("submit", submitted);
+
+displayForecast();

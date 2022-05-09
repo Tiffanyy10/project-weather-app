@@ -50,29 +50,13 @@
   padding-bottom: 10px;
 }
 .currently {
-  margin: 0 auto 0 10px;
-}
-#current-description {
-  font-weight: 100;
-  text-transform: uppercase;
-}
-#current-image img {
-  float: left;
-  max-width: 90px;
+  margin: auto auto 30px 50px;
 }
 ul {
   list-style: none;
 }
-
-.tomorrow-and-next img {
-  max-width: 90px;
-  display: block;
-  margin: auto 0;
-  text-align: center;
-}
-.tomorrow-and-next {
-  display: block;
-  margin: 25px auto auto -25px;
+.forecast-line {
+  margin: 0 0 30px 50px;
 }
 footer {
   font-weight: 600;

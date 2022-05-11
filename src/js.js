@@ -37,15 +37,21 @@ function displayForecast() {
     forecastHTML +
     `
             <div class="col-6">
-              Avgerage expected temp tomorrow: 
+              Avgerage expected temp next day: 
               <div class="tomorrow-temp">
-                45 c
+                50 c
               </div> 
               <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="tomorrow-image"/>
             </div>
         `;
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "4a3dabcb0d3320338e6143377feb5126";
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiURL).then(displayForecast);
 }
 
 function displayTemperature(response) {
@@ -64,6 +70,7 @@ function displayTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  getForecast(response.data.coord);
 }
 
 function search(city) {

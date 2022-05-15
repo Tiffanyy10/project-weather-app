@@ -17,19 +17,27 @@ function formatDate(timestamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
-function displayForecast() {
+
+function formatDay (timestamp) {
+  let date = new Date (timestamp * 1000);
+  let day = date.getDay();
+  return day;
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-
+forecast.forEach(function (forecastDay) {
   forecastHTML =
     forecastHTML +
     `
     <div class="col-6">
               Avgerage expected temp tomorrow: 
               <div class="tomorrow-temp">
-                45 c
+                ${forecastDay.temp.day}c
               </div> 
-              <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="tomorrow-image"/>
+              <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}" alt="tomorrow-image"/>
             </div>
         
         `;
@@ -39,9 +47,9 @@ function displayForecast() {
             <div class="col-6">
               Avgerage expected temp next day: 
               <div class="tomorrow-temp">
-                50 c
+                ${forecastDay.temp.day}c
               </div> 
-              <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="tomorrow-image"/>
+              <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}" alt="tomorrow-image"/>
             </div>
         `;
   forecastHTML = forecastHTML + `</div>`;

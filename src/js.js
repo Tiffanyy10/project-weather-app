@@ -21,21 +21,31 @@ function formatDate(timestamp) {
 function formatDay (timestamp) {
   let date = new Date (timestamp * 1000);
   let day = date.getDay();
-  return day;
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return days[day];
 }
 
 function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-forecast.forEach(function (forecastDay) {
+forecast.forEach(function (forecastDay, index) {
+  if (index < 2) {
   forecastHTML =
     forecastHTML +
     `
     <div class="col-6">
               Avgerage expected temp tomorrow: 
               <div class="tomorrow-temp">
-                ${forecastDay.temp.day}c
+                ${formatDay (forecastDay.dt.temp.day)}c
               </div> 
               <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}" alt="tomorrow-image"/>
             </div>
@@ -47,14 +57,15 @@ forecast.forEach(function (forecastDay) {
             <div class="col-6">
               Avgerage expected temp next day: 
               <div class="tomorrow-temp">
-                ${forecastDay.temp.day}c
+                ${formatDay (forecastDay.dt.temp.day)}c
               </div> 
               <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}" alt="tomorrow-image"/>
             </div>
         `;
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
-}
+  }
+});
 
 function getForecast(coordinates) {
   let apiKey = "4a3dabcb0d3320338e6143377feb5126";

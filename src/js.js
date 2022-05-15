@@ -43,11 +43,11 @@ forecast.forEach(function (forecastDay, index) {
     forecastHTML +
     `
     <div class="col-6">
-              Avgerage expected temp tomorrow: 
+              Avgerage expected temp ${formatDay (forecastDay.dt)}: 
               <div class="tomorrow-temp">
-                ${formatDay (forecastDay.dt.temp.day)}c
+                ${(forecastDay.dt.temp.day)}c
               </div> 
-              <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}" alt="tomorrow-image"/>
+              <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2px.png" alt="tomorrow-image"/>
             </div>
         
         `;
@@ -57,9 +57,9 @@ forecast.forEach(function (forecastDay, index) {
             <div class="col-6">
               Avgerage expected temp next day: 
               <div class="tomorrow-temp">
-                ${formatDay (forecastDay.dt.temp.day)}c
+                ${(forecastDay.dt.temp.day)}c
               </div> 
-              <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}" alt="tomorrow-image"/>
+              <img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2px.png" alt="tomorrow-image"/>
             </div>
         `;
   forecastHTML = forecastHTML + `</div>`;

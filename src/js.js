@@ -49,7 +49,7 @@ function displayForecast(response) {
               </div> 
               <img src="http://openweathermap.org/img/wn/${
                 forecastDay.weather[0].icon
-              }@2px.png" alt="tomorrow-image"/>
+              }.png" alt="tomorrow-image"/>
             </div>        
         `;
       forecastHTML = forecastHTML + `</div>`;

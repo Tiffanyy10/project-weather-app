@@ -1,9 +1,13 @@
 body {
   background: url("https://images.pexels.com/photos/2085998/pexels-photo-2085998.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-repeat: no-repeat;
-  width: 100vh;
-  height: 100vh;
+  background-position: center;
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  max-width: 900px;
 }
+
 .whole-project {
   font-family: serif;
   color: whitesmoke;

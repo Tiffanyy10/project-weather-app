@@ -1,18 +1,18 @@
+body {
+  background: url("https://images.pexels.com/photos/912364/pexels-photo-912364.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  width: 100vh;
+  height: 100vh;
+}
 .whole-project {
-  max-width: 600px;
-  margin: 25px auto;
-  padding-top: 10px;
-  border: 2px whitesmoke solid;
-  border-radius: 30px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
-
 .h1 {
   display: block;
   font-size: 33px;
   text-align: center;
   line-height: 28px;
-  margin: auto 0 22px 0;
+  margin: 50px 0 22px 0;
 }
 #todays-date {
   display: block;
@@ -48,7 +48,7 @@ ul {
 footer {
   font-weight: 600;
   float: right;
-  margin: 100px 0px auto 0px;
+  margin: 80px 0px auto 0px;
 }
 #scemoji {
   max-width: 80px;
